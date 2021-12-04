@@ -1,8 +1,9 @@
+import { getCustomRepository } from "typeorm";
 import { TagRepository } from "../repositories/TagRepositores";
 
 class StoreTags {
   async store(name: string) {
-    const tagsRepository = new TagRepository();
+    const tagsRepository = getCustomRepository(TagRepository);
     if (!name) {
       throw new Error("Name is required or invalid");
     }

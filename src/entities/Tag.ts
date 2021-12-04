@@ -5,6 +5,7 @@ import {
   Entity,
   PrimaryColumn,
 } from "typeorm";
+import { v4 as uuid } from "uuid";
 
 @Entity("tags")
 class Tags {
@@ -15,10 +16,16 @@ class Tags {
   name: string;
 
   @CreateDateColumn()
-  create_at: Date;
+  created_at: Date;
 
   @UpdateDateColumn()
-  update_at: Date;
+  updated_at: Date;
+
+  constructor() {
+    if (!this.id) {
+      this.id = uuid();
+    }
+  }
 }
 
 export { Tags };
