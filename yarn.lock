@@ -72,6 +72,18 @@
   "resolved" "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   "version" "0.0.29"
 
+"@types/jsonwebtoken@^8.5.6":
+  "integrity" "sha512-+P3O/xC7nzVizIi5VbF34YtqSonFsdnbXBnWUCYRiKOi1f9gA4sEFvXkrGr/QVV23IbMYvcoerI7nnhDUiWXRQ=="
+  "resolved" "https://registry.npmjs.org/@types/jsonwebtoken/-/jsonwebtoken-8.5.6.tgz"
+  "version" "8.5.6"
+  dependencies:
+    "@types/node" "*"
+
+"@types/node@*":
+  "integrity" "sha512-KB0sixD67CeecHC33MYn+eYARkqTheIRNuu97y2XMjR7Wu3XibO1vaY6VBV6O/a89SPI81cEUIYT87UqUWlZNw=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-16.11.11.tgz"
+  "version" "16.11.11"
+
 "@types/strip-bom@^3.0.0":
   "integrity" "sha1-FKjsOVbC6B7bdSB5CuzyHCkK69I="
   "resolved" "https://registry.npmjs.org/@types/strip-bom/-/strip-bom-3.0.0.tgz"
@@ -666,7 +678,7 @@
   dependencies:
     "esutils" "^2.0.2"
 
-"dotenv@^8.2.0":
+"dotenv@^8.2.0", "dotenv@^8.6.0":
   "integrity" "sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g=="
   "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-8.6.0.tgz"
   "version" "8.6.0"

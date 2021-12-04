@@ -6,13 +6,18 @@ class UserController {
   async store(request: Request, response: Response) {
     const { name, email, admin, password } = request.body;
     const passwordHash = await hash(password, 8);
-    const user = await serviceUser.storeUser({
+    const {
+      email: emailUser,
+      admin: AdminUser,
+      password: passwordUser,
+      id,
+    } = await serviceUser.storeUser({
       name,
       email,
       admin,
       password: passwordHash,
     });
-    return response.json(user);
+    return response.json({ id, emailUser, AdminUser, passwordUser });
   }
 }
 

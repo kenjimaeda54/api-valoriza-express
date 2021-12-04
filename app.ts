@@ -5,6 +5,7 @@ import useRoute from "./src/routes/usersRoute";
 import "./src/database";
 import errorMiddleware from "./src/middleware/middlewareError";
 import routeTag from "./src/routes/tagsRoute";
+import routeAuthenticationUser from "./src/routes/authenticationUser";
 
 class App {
   app: any;
@@ -22,6 +23,7 @@ class App {
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use("/users", useRoute);
     this.app.use("/tags", routeTag);
+    this.app.use("/login", routeAuthenticationUser);
     //middleware de erro vem depois das rotas
     //precisa da lib express-async-errors
     this.app.use(errorMiddleware.error);
