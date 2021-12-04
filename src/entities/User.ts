@@ -10,7 +10,7 @@ import { v4 as uuid } from "uuid";
 // yarn  typeorm entity:create -n User
 //para remover a migration do banco de dados
 // yarn typeorm migration:revert
-@Entity()
+@Entity("users")
 class User {
   @PrimaryColumn()
   //permito outras classes nao modificarem o id
