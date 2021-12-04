@@ -5,10 +5,11 @@ export interface IStoreUsers {
   name: string;
   email: string;
   admin: boolean;
+  password: string;
 }
 
 class StoreUserService {
-  async storeUser({ name, email, admin }: IStoreUsers) {
+  async storeUser({ name, email, admin, password }: IStoreUsers) {
     const userRepository = getCustomRepository(UserRepositores);
     if (!email) {
       throw new Error("Email is required");
@@ -17,7 +18,7 @@ class StoreUserService {
     if (user) {
       throw new Error("Email already exists");
     }
-    const userStore = userRepository.create({ name, email, admin });
+    const userStore = userRepository.create({ name, email, admin, password });
     await userRepository.save(userStore);
     return userStore;
   }

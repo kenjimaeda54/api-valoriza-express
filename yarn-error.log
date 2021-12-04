@@ -1,5 +1,5 @@
 Arguments: 
-  /home/erika/.nvm/versions/node/v15.14.0/bin/node /home/erika/.nvm/versions/node/v15.14.0/bin/yarn add async-express-error
+  /home/erika/.nvm/versions/node/v15.14.0/bin/node /home/erika/.nvm/versions/node/v15.14.0/bin/yarn add bycriptjs
 
 PATH: 
   /home/erika/.nvm/versions/node/v15.14.0/bin:/home/erika/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/emulator:/home/erika/Android/SDK/tools:/home/erika/Android/SDK/tools/bin:/home/erika/Android/SDK/platform-tools:/home/erika/android-studio/bin:/opt/android/android-sdk-linux/platform-tools:/opt/android/android-sdk-linux/cmdline-tools/lasted/bin:/opt/android/android-sdk-linux/tools:/home/erika/.rvm/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/async-express-error: Not found
+  Error: https://registry.yarnpkg.com/bycriptjs: Not found
       at Request.params.callback [as _callback] (/home/erika/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/home/erika/.nvm/versions/node/v15.14.0/lib/node_modules/yarn/lib/cli.js:140662:22)
       at Request.emit (node:events:369:20)
@@ -51,6 +51,7 @@ npm manifest:
     "dependencies": {
       "@types/uuid": "^8.3.3",
       "express": "^4.17.1",
+      "express-async-errors": "^3.1.1",
       "reflect-metadata": "^0.1.13",
       "sqlite3": "^5.0.2",
       "typeorm": "^0.2.41",
@@ -978,7 +979,12 @@ Lockfile:
     "resolved" "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
     "version" "1.8.1"
   
-  "express@^4.17.1":
+  "express-async-errors@^3.1.1":
+    "integrity" "sha512-h6aK1da4tpqWSbyCa3FxB/V6Ehd4EEB15zyQq9qe75OZBp0krinNKuH4rAY+S/U/2I36vdLAUFSjQJ+TFmODng=="
+    "resolved" "https://registry.npmjs.org/express-async-errors/-/express-async-errors-3.1.1.tgz"
+    "version" "3.1.1"
+  
+  "express@^4.16.2", "express@^4.17.1":
     "integrity" "sha512-mHJ9O79RqluphRrcw2X/GTh3k9tVv8YcoyY4Kkh4WDMUYKRZUq0h1o0w2rrrxBqM7VoeUVqgb27xlEMXTnYt4g=="
     "resolved" "https://registry.npmjs.org/express/-/express-4.17.1.tgz"
     "version" "4.17.1"
