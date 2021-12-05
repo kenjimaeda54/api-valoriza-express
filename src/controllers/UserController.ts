@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
-import serviceUser from "../services/StoreUsers";
 import { hash } from "bcryptjs";
+import serviceUser from "../services/StoreUsers";
+import showUsers from "../services/ShowUsers";
 
 class UserController {
   async store(request: Request, response: Response) {
@@ -18,6 +19,10 @@ class UserController {
       password: passwordHash,
     });
     return response.json({ id, emailUser, adminUser, passwordUser });
+  }
+  async show(request: Request, res: Response) {
+    const users = await showUsers.showUsers();
+    return res.status(200).json(users);
   }
 }
 
