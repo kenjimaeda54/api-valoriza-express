@@ -6,6 +6,7 @@ import {
   PrimaryColumn,
 } from "typeorm";
 import { v4 as uuid } from "uuid";
+import { Expose } from "class-transformer";
 
 @Entity("tags")
 class Tags {
@@ -20,6 +21,12 @@ class Tags {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  //estou subscrevendo os nomes que vierem pela tag
+  @Expose({ name: "custom_name" })
+  nameCustom() {
+    return `#${this.name}`;
+  }
 
   constructor() {
     if (!this.id) {

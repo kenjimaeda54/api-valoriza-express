@@ -3,7 +3,7 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
-  ManyToMany,
+  ManyToOne,
   PrimaryColumn,
   UpdateDateColumn,
 } from "typeorm";
@@ -21,7 +21,7 @@ class Compliments {
 
   @JoinColumn({ name: "user_sender" })
   //posso ter muito comentarios para um usuario
-  @ManyToMany(() => User)
+  @ManyToOne(() => User)
   userSender: User;
 
   @Column()
@@ -29,14 +29,14 @@ class Compliments {
 
   //usando joinColumn  vai retornar todos os campos do usuario que recebeu o elogio
   @JoinColumn({ name: "user_receiver" })
-  @ManyToMany(() => User)
+  @ManyToOne(() => User)
   userReceiver: User;
 
   @Column()
   tag_id: string;
 
   @JoinColumn({ name: "tag_id" })
-  @ManyToMany(() => Tags)
+  @ManyToOne(() => Tags)
   tagId: Tags;
 
   @Column()

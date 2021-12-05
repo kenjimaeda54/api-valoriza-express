@@ -9,6 +9,8 @@ class ComplimentsUserReceiver {
       where: {
         user_receiver: userId,
       },
+      //preciso passar mesma nome de relacao que esta no join column
+      relations: ["userSender", "tagId"],
     });
     return complimentsUserReceiver;
   }

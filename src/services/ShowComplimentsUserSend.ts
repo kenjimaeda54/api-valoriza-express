@@ -9,6 +9,7 @@ class ComplimentsUserSend {
       where: {
         user_sender: userId,
       },
+      relations: ["tagId", "userReceiver"],
     });
   }
 }
