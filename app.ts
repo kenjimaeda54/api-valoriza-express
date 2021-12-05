@@ -7,6 +7,8 @@ import errorMiddleware from "./src/middleware/middlewareError";
 import routeTag from "./src/routes/tagsRoute";
 import routeAuthenticationUser from "./src/routes/authenticationUser";
 import routeCompliments from "./src/routes/compliments";
+import routerComplimentsSend from "./src/routes/complimentsUserSend";
+import routerComplimentsReceiver from "./src/routes/complimentsUserReceiver";
 
 class App {
   app: any;
@@ -26,6 +28,8 @@ class App {
     this.app.use("/tags", routeTag);
     this.app.use("/login", routeAuthenticationUser);
     this.app.use("/compliments", routeCompliments);
+    this.app.use("/compliments/send", routerComplimentsSend);
+    this.app.use("/compliments/receiver", routerComplimentsReceiver);
     //middleware de erro vem depois das rotas
     //precisa da lib express-async-errors
     this.app.use(errorMiddleware.error);

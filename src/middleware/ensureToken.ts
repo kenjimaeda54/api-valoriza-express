@@ -20,6 +20,7 @@ export default function MiddlewareEnsureLogin(
       message: "No token provided",
     });
   }
+  //aplicando destruction
   const [, token] = auth.split(" ");
 
   //verifica se o token esta correto
