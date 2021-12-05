@@ -24,6 +24,7 @@ class AuthenticationUser {
     //string
     const token = sign({ email }, process.env.TOKEN_SECRET, {
       //qual informacoes quero passar para subject,no cao o id do usuario
+      //depois consigo recuperar chamando campo {sub}
       subject: user.id,
       expiresIn: process.env.TOKEN_EXPIRATION,
     });

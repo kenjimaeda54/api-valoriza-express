@@ -8,7 +8,7 @@ class UserController {
     const passwordHash = await hash(password, 8);
     const {
       email: emailUser,
-      admin: AdminUser,
+      admin: adminUser,
       password: passwordUser,
       id,
     } = await serviceUser.storeUser({
@@ -17,7 +17,7 @@ class UserController {
       admin,
       password: passwordHash,
     });
-    return response.json({ id, emailUser, AdminUser, passwordUser });
+    return response.json({ id, emailUser, adminUser, passwordUser });
   }
 }
 

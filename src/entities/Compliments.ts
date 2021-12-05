@@ -14,7 +14,7 @@ import { v4 as uuid } from "uuid";
 @Entity("compliments")
 class Compliments {
   @PrimaryColumn()
-  readonly id;
+  readonly id: string;
 
   @Column()
   user_sender: string;
@@ -55,4 +55,4 @@ class Compliments {
   }
 }
 
-export default new Compliments();
+export { Compliments };

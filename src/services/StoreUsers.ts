@@ -9,7 +9,9 @@ export interface IStoreUsers {
 }
 
 class StoreUserService {
-  async storeUser({ name, email, admin, password }: IStoreUsers) {
+  //para determinar valor default de um parametro e so colocar
+  //igual
+  async storeUser({ name, email, admin = false, password }: IStoreUsers) {
     const userRepository = getCustomRepository(UserRepositores);
     if (!email) {
       throw new Error("Email is required");
