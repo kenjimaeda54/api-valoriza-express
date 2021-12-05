@@ -1,8 +1,10 @@
 import { Router } from "express";
 import tagController from "../controllers/TagController";
+import ensureToken from "../middleware/ensureToken";
+import ensureAdmin from "../middleware/ensureAdmin";
 
 const router = Router();
 
-router.post("/", tagController.storage);
+router.post("/", ensureToken, ensureAdmin, tagController.storage);
 
 export default router;
