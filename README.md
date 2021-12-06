@@ -5,16 +5,16 @@ Api em Express com SqlLite e TypeOrm
 ## Motivações
 
 Criar api para cadastros de elogios. </br>
-Administrador pode gera as tags dos elogios e as pessoas podem enviar seus elogios ou receber.
+Administrador pode gera as tags dos elogios é as pessoas podem enviar seus elogios ou receber.
 
 ## Features
 
 - Usei o typeOrm para lidar com o banco de dados.
-- TypeOrm e uma ORM para facilitar escrita de consulta do banco.
+- TypeOrm é  uma ORM para facilitar escrita de consulta do banco.
 - Abaixo substitui o comando SELECT \* FROM tags WHERE name = 'name' usanod findOne
 - Trabalhei com a ideia dos token, exemplo abaixo setei o subject com id do usuario, depois recupero,pela desestruturação do sub e seto na request
-- Sing e uma funcao do jswToken para setar nosso token,ele precisa de pelo menos 3 parametros nosso payload,chave secreta e o tempo de expiracao,tambem posso usar o subject para compartilhar os dados que desejo
-- Verify e uma funcao do jswToken para verificar se o token esta correto,
+- Sing é  uma funcao do jswToken para setar nosso token,ele precisa de pelo menos 3 parametros nosso payload,chave secreta e o tempo de expiracao,tambem posso usar o subject para compartilhar os dados que desejo
+- Verify é  uma funcao do jswToken para verificar se o token esta correto,
   ele espera pelo menos dois parametros o token em si e a chave secreta
 
 ```typescript
@@ -97,8 +97,8 @@ export default function MiddlewareEnsureLogin(
 ##
 
 - Para retornar apenas os valores que desejo do find no typeOrm utilizo o select
-- Relations e a relacao das minhas entidades,assim consigo retornar o objeto que faz relacao aos elogios.
-- Relacao e de Muitos para um. Um usuario pode ter muitos elogios,mas nao posso ter elogios sem usuarios.
+- Relations é  a relação das minhas entidades,assim consigo retornar o objeto que faz relação aos elogios.
+- Relação e de Muitos para um. Um usuario pode ter muitos elogios,mas nao posso ter elogios sem usuarios.
 - O campo joinColumn precisa ser identico a da relacao.
 
 ```typescript
@@ -167,7 +167,7 @@ class Compliments {
 - Sobrescrevi as tipagens do express
 - Para isto precisa seguir mesmo estrutura de diretorios da lib express
 - Precisa reparar qual nomenclatura eles utilizam para tipa aqui era declare nameEspace
-- Express e o nome da lib e a interface que desejo nomear no caso a Request
+- Express e o nome da lib é a interface que desejo nomear no caso a Request
 - Precisa tambem apontar o diretorio que esta a pasta de tipagens
 
 ```typeScript
