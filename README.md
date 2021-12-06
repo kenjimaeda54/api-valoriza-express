@@ -100,6 +100,7 @@ export default function MiddlewareEnsureLogin(
 - Relations é  a relação das minhas entidades,assim consigo retornar o objeto que faz relação aos elogios.
 - Relação e de Muitos para um. Um usuario pode ter muitos elogios,mas nao posso ter elogios sem usuarios.
 - O campo joinColumn precisa ser identico a da relacao.
+- Para typescript permiter uso de decoradores precisei mecher no tsconfig
 
 ```typescript
 class ComplimentsUserSend {
@@ -160,6 +161,11 @@ class Compliments {
     }
   }
 }
+
+//tsconfig
+"experimentalDecorators": true 
+"emitDecoratorMetadata": true
+
 ```
 
 ##
